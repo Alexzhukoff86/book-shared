@@ -2,10 +2,10 @@
 """Client and server classes corresponding to protobuf-defined services."""
 import grpc
 
-import protopy.book_pb2 as book__pb2
+import src.protopy.order_pb2 as order__pb2
 
 
-class BookServiceStub(object):
+class OrderServiceStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -14,74 +14,74 @@ class BookServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.GetBook = channel.unary_unary(
-                '/BookService/GetBook',
-                request_serializer=book__pb2.GetBookRequest.SerializeToString,
-                response_deserializer=book__pb2.GetBookResponse.FromString,
+        self.GetOrder = channel.unary_unary(
+                '/OrderService/GetOrder',
+                request_serializer=order__pb2.GetOrderRequest.SerializeToString,
+                response_deserializer=order__pb2.GetOrderResponse.FromString,
                 )
-        self.UpdateBookCount = channel.unary_unary(
-                '/BookService/UpdateBookCount',
-                request_serializer=book__pb2.UpdateBookCountRequest.SerializeToString,
-                response_deserializer=book__pb2.UpdateBookCountResponse.FromString,
+        self.CreateOrder = channel.unary_unary(
+                '/OrderService/CreateOrder',
+                request_serializer=order__pb2.CreateOrderRequest.SerializeToString,
+                response_deserializer=order__pb2.CreateOrderResponse.FromString,
                 )
-        self.AddBook = channel.unary_unary(
-                '/BookService/AddBook',
-                request_serializer=book__pb2.AddBookRequest.SerializeToString,
-                response_deserializer=book__pb2.AddBookResponse.FromString,
+        self.UpdateOrder = channel.unary_unary(
+                '/OrderService/UpdateOrder',
+                request_serializer=order__pb2.UpdateOrderRequest.SerializeToString,
+                response_deserializer=order__pb2.UpdateOrderResponse.FromString,
                 )
 
 
-class BookServiceServicer(object):
+class OrderServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def GetBook(self, request, context):
+    def GetOrder(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def UpdateBookCount(self, request, context):
+    def CreateOrder(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
-    def AddBook(self, request, context):
+    def UpdateOrder(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
 
-def add_BookServiceServicer_to_server(servicer, server):
+def add_OrderServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'GetBook': grpc.unary_unary_rpc_method_handler(
-                    servicer.GetBook,
-                    request_deserializer=book__pb2.GetBookRequest.FromString,
-                    response_serializer=book__pb2.GetBookResponse.SerializeToString,
+            'GetOrder': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetOrder,
+                    request_deserializer=order__pb2.GetOrderRequest.FromString,
+                    response_serializer=order__pb2.GetOrderResponse.SerializeToString,
             ),
-            'UpdateBookCount': grpc.unary_unary_rpc_method_handler(
-                    servicer.UpdateBookCount,
-                    request_deserializer=book__pb2.UpdateBookCountRequest.FromString,
-                    response_serializer=book__pb2.UpdateBookCountResponse.SerializeToString,
+            'CreateOrder': grpc.unary_unary_rpc_method_handler(
+                    servicer.CreateOrder,
+                    request_deserializer=order__pb2.CreateOrderRequest.FromString,
+                    response_serializer=order__pb2.CreateOrderResponse.SerializeToString,
             ),
-            'AddBook': grpc.unary_unary_rpc_method_handler(
-                    servicer.AddBook,
-                    request_deserializer=book__pb2.AddBookRequest.FromString,
-                    response_serializer=book__pb2.AddBookResponse.SerializeToString,
+            'UpdateOrder': grpc.unary_unary_rpc_method_handler(
+                    servicer.UpdateOrder,
+                    request_deserializer=order__pb2.UpdateOrderRequest.FromString,
+                    response_serializer=order__pb2.UpdateOrderResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'BookService', rpc_method_handlers)
+            'OrderService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class BookService(object):
+class OrderService(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def GetBook(request,
+    def GetOrder(request,
             target,
             options=(),
             channel_credentials=None,
@@ -91,14 +91,14 @@ class BookService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/BookService/GetBook',
-            book__pb2.GetBookRequest.SerializeToString,
-            book__pb2.GetBookResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/OrderService/GetOrder',
+            order__pb2.GetOrderRequest.SerializeToString,
+            order__pb2.GetOrderResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def UpdateBookCount(request,
+    def CreateOrder(request,
             target,
             options=(),
             channel_credentials=None,
@@ -108,14 +108,14 @@ class BookService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/BookService/UpdateBookCount',
-            book__pb2.UpdateBookCountRequest.SerializeToString,
-            book__pb2.UpdateBookCountResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/OrderService/CreateOrder',
+            order__pb2.CreateOrderRequest.SerializeToString,
+            order__pb2.CreateOrderResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
-    def AddBook(request,
+    def UpdateOrder(request,
             target,
             options=(),
             channel_credentials=None,
@@ -125,8 +125,8 @@ class BookService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/BookService/AddBook',
-            book__pb2.AddBookRequest.SerializeToString,
-            book__pb2.AddBookResponse.FromString,
+        return grpc.experimental.unary_unary(request, target, '/OrderService/UpdateOrder',
+            order__pb2.UpdateOrderRequest.SerializeToString,
+            order__pb2.UpdateOrderResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -1,0 +1,50 @@
+syntax = "proto3";
+
+enum BookGenre {
+  FICTION = 0;
+  MYSTERY = 1;
+  SCIENCE = 2;
+  SELF_HELP = 3;
+}
+
+message Book {
+  int32 id = 1;
+  BookGenre genre = 2;
+  string title = 3;
+  int32 count = 4;
+  float price = 5;
+}
+
+message GetBookRequest {
+  string title = 1;
+}
+
+message GetBookResponse {
+  Book book = 1;
+}
+
+message UpdateBookCountRequest {
+  int32 id = 1;
+  int32 count = 2;
+}
+
+message UpdateBookCountResponse {
+  Book book = 1;
+}
+
+message AddBookRequest {
+  BookGenre genre = 1;
+  string title = 2;
+  int32 count = 3;
+}
+
+message AddBookResponse {
+  Book book = 1;
+}
+
+
+service BookService {
+  rpc GetBook (GetBookRequest) returns (GetBookResponse) {}
+  rpc UpdateBookCount (UpdateBookCountRequest) returns (UpdateBookCountResponse) {}
+  rpc AddBook (AddBookRequest) returns (AddBookResponse) {}
+}

@@ -1,6 +1,6 @@
 from flask import Flask
 
-from db import db
+from books_shared.utils.db import db
 app = Flask(__name__)
 
 # app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False

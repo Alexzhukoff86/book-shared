@@ -4,7 +4,7 @@ version = "0.3.0"
 description = ""
 authors = ["oleksandr.zhukov <oleksandr.zhukov@alertinnovation.com>"]
 packages = [
-    { include = "src"}
+    { include = "books_shared"}
 ]
 
 [tool.poetry.dependencies]

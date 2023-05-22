@@ -1,11 +1,10 @@
 [tool.poetry]
 name = "books-shared"
-version = "0.1.0"
+version = "0.3.0"
 description = ""
 authors = ["oleksandr.zhukov <oleksandr.zhukov@alertinnovation.com>"]
 packages = [
-    { include = "utils"},
-    { include="protopy"}
+    { include = "src"}
 ]
 
 [tool.poetry.dependencies]

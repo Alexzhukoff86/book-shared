@@ -1,4 +1,5 @@
-from setuptools import setup
+from setuptools import setup, find_packages
+
 setup(
     name='books-shared',
     version='0.1',
@@ -7,7 +8,7 @@ setup(
     url='https://github.com/Alexzhukoff86/book-shared',
     keywords='development, setup, setuptools, wheel',
     python_requires='==3.8.16',
-    packages=['books_shared'],
+    packages=find_packages(),
     install_requires=[
         "grpcio_tools == 1.33.2",
         "grpcio-reflection == 1.33.2",

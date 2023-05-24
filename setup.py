@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='books-shared',
-    version='0.1',
+    version='0.2',
     author='Oleksandr Zhukov',
     description='Shared modules for book store project',
     url='https://github.com/Alexzhukoff86/book-shared',

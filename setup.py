@@ -5,7 +5,7 @@ setup(
     author='Oleksandr Zhukov',
     description='Shared modules for book store project',
     url='https://github.com/Alexzhukoff86/book-shared',
-    keywords='development, setup, setuptools',
+    keywords='development, setup, setuptools, wheel',
     python_requires='3.8.16',
     packages=['books_shared'],
     install_requires=[

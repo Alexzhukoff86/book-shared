@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='books-shared',
-    version='0.2',
+    version='0.2.1',
     author='Oleksandr Zhukov',
     description='Shared modules for book store project',
     url='https://github.com/Alexzhukoff86/book-shared',
@@ -14,6 +14,6 @@ setup(
         "grpcio-reflection == 1.33.2",
         "python-dotenv == 1.0.0",
         "Flask-SQLAlchemy == 3.0.3",
-        "Faker==0.7.4"
+        "Faker==18.9.0"
     ]
 )

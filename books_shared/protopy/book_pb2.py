@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\nbook.proto\"Z\n\x04\x42ook\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x19\n\x05genre\x18\x02 \x01(\x0e\x32\n.BookGenre\x12\r\n\x05title\x18\x03 \x01(\t\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05price\x18\x05 \x01(\x02\"\x1f\n\x0eGetBookRequest\x12\r\n\x05title\x18\x01 \x01(\t\"&\n\x0fGetBookResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book\"3\n\x16UpdateBookCountRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\".\n\x17UpdateBookCountResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book\"I\n\x0e\x41\x64\x64\x42ookRequest\x12\x19\n\x05genre\x18\x01 \x01(\x0e\x32\n.BookGenre\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"&\n\x0f\x41\x64\x64\x42ookResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book*A\n\tBookGenre\x12\x0b\n\x07\x46ICTION\x10\x00\x12\x0b\n\x07MYSTERY\x10\x01\x12\x0b\n\x07SCIENCE\x10\x02\x12\r\n\tSELF_HELP\x10\x03\x32\xb5\x01\n\x0b\x42ookService\x12.\n\x07GetBook\x12\x0f.GetBookRequest\x1a\x10.GetBookResponse\"\x00\x12\x46\n\x0fUpdateBookCount\x12\x17.UpdateBookCountRequest\x1a\x18.UpdateBookCountResponse\"\x00\x12.\n\x07\x41\x64\x64\x42ook\x12\x0f.AddBookRequest\x1a\x10.AddBookResponse\"\x00\x62\x06proto3'
-)
+  serialized_pb=b'\n\nbook.proto\x1a\x1bgoogle/protobuf/empty.proto\"Z\n\x04\x42ook\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x19\n\x05genre\x18\x02 \x01(\x0e\x32\n.BookGenre\x12\r\n\x05title\x18\x03 \x01(\t\x12\r\n\x05\x63ount\x18\x04 \x01(\x05\x12\r\n\x05price\x18\x05 \x01(\x02\"\x1f\n\x0eGetBookRequest\x12\r\n\x05title\x18\x01 \x01(\t\"&\n\x0fGetBookResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book\"3\n\x16UpdateBookCountRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\r\n\x05\x63ount\x18\x02 \x01(\x05\".\n\x17UpdateBookCountResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book\"I\n\x0e\x41\x64\x64\x42ookRequest\x12\x19\n\x05genre\x18\x01 \x01(\x0e\x32\n.BookGenre\x12\r\n\x05title\x18\x02 \x01(\t\x12\r\n\x05\x63ount\x18\x03 \x01(\x05\"&\n\x0f\x41\x64\x64\x42ookResponse\x12\x13\n\x04\x62ook\x18\x01 \x01(\x0b\x32\x05.Book\"+\n\x13GetBookListResponse\x12\x14\n\x05\x62ooks\x18\x01 \x03(\x0b\x32\x05.Book*A\n\tBookGenre\x12\x0b\n\x07\x46ICTION\x10\x00\x12\x0b\n\x07MYSTERY\x10\x01\x12\x0b\n\x07SCIENCE\x10\x02\x12\r\n\tSELF_HELP\x10\x03\x32\xf4\x01\n\x0b\x42ookService\x12=\n\x0bGetBookList\x12\x16.google.protobuf.Empty\x1a\x14.GetBookListResponse\"\x00\x12.\n\x07GetBook\x12\x0f.GetBookRequest\x1a\x10.GetBookResponse\"\x00\x12\x46\n\x0fUpdateBookCount\x12\x17.UpdateBookCountRequest\x1a\x18.UpdateBookCountResponse\"\x00\x12.\n\x07\x41\x64\x64\x42ook\x12\x0f.AddBookRequest\x1a\x10.AddBookResponse\"\x00\x62\x06proto3'
+  ,
+  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 _BOOKGENRE = _descriptor.EnumDescriptor(
   name='BookGenre',
@@ -53,8 +55,8 @@ _BOOKGENRE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=395,
-  serialized_end=460,
+  serialized_start=469,
+  serialized_end=534,
 )
 _sym_db.RegisterEnumDescriptor(_BOOKGENRE)
 
@@ -121,8 +123,8 @@ _BOOK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=14,
-  serialized_end=104,
+  serialized_start=43,
+  serialized_end=133,
 )
 
 
@@ -153,8 +155,8 @@ _GETBOOKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=106,
-  serialized_end=137,
+  serialized_start=135,
+  serialized_end=166,
 )
 
 
@@ -185,8 +187,8 @@ _GETBOOKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=139,
-  serialized_end=177,
+  serialized_start=168,
+  serialized_end=206,
 )
 
 
@@ -224,8 +226,8 @@ _UPDATEBOOKCOUNTREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=179,
-  serialized_end=230,
+  serialized_start=208,
+  serialized_end=259,
 )
 
 
@@ -256,8 +258,8 @@ _UPDATEBOOKCOUNTRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=232,
-  serialized_end=278,
+  serialized_start=261,
+  serialized_end=307,
 )
 
 
@@ -302,8 +304,8 @@ _ADDBOOKREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=280,
-  serialized_end=353,
+  serialized_start=309,
+  serialized_end=382,
 )
 
 
@@ -334,8 +336,40 @@ _ADDBOOKRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=355,
-  serialized_end=393,
+  serialized_start=384,
+  serialized_end=422,
+)
+
+
+_GETBOOKLISTRESPONSE = _descriptor.Descriptor(
+  name='GetBookListResponse',
+  full_name='GetBookListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='books', full_name='GetBookListResponse.books', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=424,
+  serialized_end=467,
 )
 
 _BOOK.fields_by_name['genre'].enum_type = _BOOKGENRE
@@ -343,6 +377,7 @@ _GETBOOKRESPONSE.fields_by_name['book'].message_type = _BOOK
 _UPDATEBOOKCOUNTRESPONSE.fields_by_name['book'].message_type = _BOOK
 _ADDBOOKREQUEST.fields_by_name['genre'].enum_type = _BOOKGENRE
 _ADDBOOKRESPONSE.fields_by_name['book'].message_type = _BOOK
+_GETBOOKLISTRESPONSE.fields_by_name['books'].message_type = _BOOK
 DESCRIPTOR.message_types_by_name['Book'] = _BOOK
 DESCRIPTOR.message_types_by_name['GetBookRequest'] = _GETBOOKREQUEST
 DESCRIPTOR.message_types_by_name['GetBookResponse'] = _GETBOOKRESPONSE
@@ -350,6 +385,7 @@ DESCRIPTOR.message_types_by_name['UpdateBookCountRequest'] = _UPDATEBOOKCOUNTREQ
 DESCRIPTOR.message_types_by_name['UpdateBookCountResponse'] = _UPDATEBOOKCOUNTRESPONSE
 DESCRIPTOR.message_types_by_name['AddBookRequest'] = _ADDBOOKREQUEST
 DESCRIPTOR.message_types_by_name['AddBookResponse'] = _ADDBOOKRESPONSE
+DESCRIPTOR.message_types_by_name['GetBookListResponse'] = _GETBOOKLISTRESPONSE
 DESCRIPTOR.enum_types_by_name['BookGenre'] = _BOOKGENRE
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -402,6 +438,13 @@ AddBookResponse = _reflection.GeneratedProtocolMessageType('AddBookResponse', (_
   })
 _sym_db.RegisterMessage(AddBookResponse)
 
+GetBookListResponse = _reflection.GeneratedProtocolMessageType('GetBookListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETBOOKLISTRESPONSE,
+  '__module__' : 'book_pb2'
+  # @@protoc_insertion_point(class_scope:GetBookListResponse)
+  })
+_sym_db.RegisterMessage(GetBookListResponse)
+
 
 
 _BOOKSERVICE = _descriptor.ServiceDescriptor(
@@ -411,13 +454,23 @@ _BOOKSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=463,
-  serialized_end=644,
+  serialized_start=537,
+  serialized_end=781,
   methods=[
+  _descriptor.MethodDescriptor(
+    name='GetBookList',
+    full_name='BookService.GetBookList',
+    index=0,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    output_type=_GETBOOKLISTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
   _descriptor.MethodDescriptor(
     name='GetBook',
     full_name='BookService.GetBook',
-    index=0,
+    index=1,
     containing_service=None,
     input_type=_GETBOOKREQUEST,
     output_type=_GETBOOKRESPONSE,
@@ -427,7 +480,7 @@ _BOOKSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='UpdateBookCount',
     full_name='BookService.UpdateBookCount',
-    index=1,
+    index=2,
     containing_service=None,
     input_type=_UPDATEBOOKCOUNTREQUEST,
     output_type=_UPDATEBOOKCOUNTRESPONSE,
@@ -437,7 +490,7 @@ _BOOKSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='AddBook',
     full_name='BookService.AddBook',
-    index=2,
+    index=3,
     containing_service=None,
     input_type=_ADDBOOKREQUEST,
     output_type=_ADDBOOKRESPONSE,

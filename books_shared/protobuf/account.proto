@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "google/protobuf/empty.proto";
 
 message Account {
   int32 id=1;
@@ -14,7 +15,6 @@ message GetAccountResponse {
   Account account=1;
 }
 
-
 message CreateAccountRequest {
   string name=1;
   string email=2;
@@ -24,9 +24,13 @@ message CreateAccountResponse {
   int32 id=1;
 }
 
+message GetAccountListResponse {
+  repeated Account accounts=1;
+}
 
 
 service AccountService {
+  rpc GetAccountList (google.protobuf.Empty) returns (GetAccountListResponse) {}
   rpc GetAccount (GetAccountRequest) returns (GetAccountResponse) {}
   rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse) {}
 }

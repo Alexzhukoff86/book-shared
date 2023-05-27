@@ -12,6 +12,7 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -20,8 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0border.proto\"h\n\x05Order\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x13\n\x0btotal_price\x18\x04 \x01(\x02\x12\x1c\n\x06status\x18\x05 \x01(\x0e\x32\x0c.OrderStatus\"\x1d\n\x0fGetOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\")\n\x10GetOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"d\n\x12UpdateOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0btotal_price\x18\x02 \x01(\x02\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x1c\n\x06status\x18\x04 \x01(\x0e\x32\x0c.OrderStatus\",\n\x13UpdateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"%\n\x12\x43reateOrderRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\",\n\x13\x43reateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order*5\n\x0bOrderStatus\x12\x0b\n\x07\x43REATED\x10\x00\x12\x0e\n\nIN_PROGRES\x10\x01\x12\t\n\x05PAYED\x10\x02\x32\xb9\x01\n\x0cOrderService\x12\x31\n\x08GetOrder\x12\x10.GetOrderRequest\x1a\x11.GetOrderResponse\"\x00\x12:\n\x0b\x43reateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00\x12:\n\x0bUpdateOrder\x12\x13.UpdateOrderRequest\x1a\x14.UpdateOrderResponse\"\x00\x62\x06proto3'
-)
+  serialized_pb=b'\n\x0border.proto\x1a\x1bgoogle/protobuf/empty.proto\"h\n\x05Order\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x13\n\x0btotal_price\x18\x04 \x01(\x02\x12\x1c\n\x06status\x18\x05 \x01(\x0e\x32\x0c.OrderStatus\"\x1d\n\x0fGetOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\")\n\x10GetOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"d\n\x12UpdateOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0btotal_price\x18\x02 \x01(\x02\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x1c\n\x06status\x18\x04 \x01(\x0e\x32\x0c.OrderStatus\",\n\x13UpdateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"%\n\x12\x43reateOrderRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\",\n\x13\x43reateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\".\n\x14GetOrderListResponse\x12\x16\n\x06orders\x18\x01 \x03(\x0b\x32\x06.Order*5\n\x0bOrderStatus\x12\x0b\n\x07\x43REATED\x10\x00\x12\x0e\n\nIN_PROGRES\x10\x01\x12\t\n\x05PAYED\x10\x02\x32\xfa\x01\n\x0cOrderService\x12?\n\x0cGetOrderList\x12\x16.google.protobuf.Empty\x1a\x15.GetOrderListResponse\"\x00\x12\x31\n\x08GetOrder\x12\x10.GetOrderRequest\x1a\x11.GetOrderResponse\"\x00\x12:\n\x0b\x43reateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00\x12:\n\x0bUpdateOrder\x12\x13.UpdateOrderRequest\x1a\x14.UpdateOrderResponse\"\x00\x62\x06proto3'
+  ,
+  dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
 _ORDERSTATUS = _descriptor.EnumDescriptor(
   name='OrderStatus',
@@ -48,8 +50,8 @@ _ORDERSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=428,
-  serialized_end=481,
+  serialized_start=505,
+  serialized_end=558,
 )
 _sym_db.RegisterEnumDescriptor(_ORDERSTATUS)
 
@@ -115,8 +117,8 @@ _ORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=15,
-  serialized_end=119,
+  serialized_start=44,
+  serialized_end=148,
 )
 
 
@@ -147,8 +149,8 @@ _GETORDERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=121,
-  serialized_end=150,
+  serialized_start=150,
+  serialized_end=179,
 )
 
 
@@ -179,8 +181,8 @@ _GETORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=152,
-  serialized_end=193,
+  serialized_start=181,
+  serialized_end=222,
 )
 
 
@@ -232,8 +234,8 @@ _UPDATEORDERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=195,
-  serialized_end=295,
+  serialized_start=224,
+  serialized_end=324,
 )
 
 
@@ -264,8 +266,8 @@ _UPDATEORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=297,
-  serialized_end=341,
+  serialized_start=326,
+  serialized_end=370,
 )
 
 
@@ -296,8 +298,8 @@ _CREATEORDERREQUEST = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=343,
-  serialized_end=380,
+  serialized_start=372,
+  serialized_end=409,
 )
 
 
@@ -328,8 +330,40 @@ _CREATEORDERRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=382,
-  serialized_end=426,
+  serialized_start=411,
+  serialized_end=455,
+)
+
+
+_GETORDERLISTRESPONSE = _descriptor.Descriptor(
+  name='GetOrderListResponse',
+  full_name='GetOrderListResponse',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='orders', full_name='GetOrderListResponse.orders', index=0,
+      number=1, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=457,
+  serialized_end=503,
 )
 
 _ORDER.fields_by_name['status'].enum_type = _ORDERSTATUS
@@ -337,6 +371,7 @@ _GETORDERRESPONSE.fields_by_name['order'].message_type = _ORDER
 _UPDATEORDERREQUEST.fields_by_name['status'].enum_type = _ORDERSTATUS
 _UPDATEORDERRESPONSE.fields_by_name['order'].message_type = _ORDER
 _CREATEORDERRESPONSE.fields_by_name['order'].message_type = _ORDER
+_GETORDERLISTRESPONSE.fields_by_name['orders'].message_type = _ORDER
 DESCRIPTOR.message_types_by_name['Order'] = _ORDER
 DESCRIPTOR.message_types_by_name['GetOrderRequest'] = _GETORDERREQUEST
 DESCRIPTOR.message_types_by_name['GetOrderResponse'] = _GETORDERRESPONSE
@@ -344,6 +379,7 @@ DESCRIPTOR.message_types_by_name['UpdateOrderRequest'] = _UPDATEORDERREQUEST
 DESCRIPTOR.message_types_by_name['UpdateOrderResponse'] = _UPDATEORDERRESPONSE
 DESCRIPTOR.message_types_by_name['CreateOrderRequest'] = _CREATEORDERREQUEST
 DESCRIPTOR.message_types_by_name['CreateOrderResponse'] = _CREATEORDERRESPONSE
+DESCRIPTOR.message_types_by_name['GetOrderListResponse'] = _GETORDERLISTRESPONSE
 DESCRIPTOR.enum_types_by_name['OrderStatus'] = _ORDERSTATUS
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
@@ -396,6 +432,13 @@ CreateOrderResponse = _reflection.GeneratedProtocolMessageType('CreateOrderRespo
   })
 _sym_db.RegisterMessage(CreateOrderResponse)
 
+GetOrderListResponse = _reflection.GeneratedProtocolMessageType('GetOrderListResponse', (_message.Message,), {
+  'DESCRIPTOR' : _GETORDERLISTRESPONSE,
+  '__module__' : 'order_pb2'
+  # @@protoc_insertion_point(class_scope:GetOrderListResponse)
+  })
+_sym_db.RegisterMessage(GetOrderListResponse)
+
 
 
 _ORDERSERVICE = _descriptor.ServiceDescriptor(
@@ -405,13 +448,23 @@ _ORDERSERVICE = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=484,
-  serialized_end=669,
+  serialized_start=561,
+  serialized_end=811,
   methods=[
+  _descriptor.MethodDescriptor(
+    name='GetOrderList',
+    full_name='OrderService.GetOrderList',
+    index=0,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    output_type=_GETORDERLISTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
   _descriptor.MethodDescriptor(
     name='GetOrder',
     full_name='OrderService.GetOrder',
-    index=0,
+    index=1,
     containing_service=None,
     input_type=_GETORDERREQUEST,
     output_type=_GETORDERRESPONSE,
@@ -421,7 +474,7 @@ _ORDERSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='CreateOrder',
     full_name='OrderService.CreateOrder',
-    index=1,
+    index=2,
     containing_service=None,
     input_type=_CREATEORDERREQUEST,
     output_type=_CREATEORDERRESPONSE,
@@ -431,7 +484,7 @@ _ORDERSERVICE = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='UpdateOrder',
     full_name='OrderService.UpdateOrder',
-    index=2,
+    index=3,
     containing_service=None,
     input_type=_UPDATEORDERREQUEST,
     output_type=_UPDATEORDERRESPONSE,

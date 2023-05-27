@@ -1,4 +1,5 @@
 syntax = "proto3";
+import "google/protobuf/empty.proto";
 
 enum BookGenre {
   FICTION = 0;
@@ -42,8 +43,13 @@ message AddBookResponse {
   Book book = 1;
 }
 
+message GetBookListResponse {
+  repeated Book books = 1;
+}
+
 
 service BookService {
+  rpc GetBookList (google.protobuf.Empty) returns (GetBookListResponse) {}
   rpc GetBook (GetBookRequest) returns (GetBookResponse) {}
   rpc UpdateBookCount (UpdateBookCountRequest) returns (UpdateBookCountResponse) {}
   rpc AddBook (AddBookRequest) returns (AddBookResponse) {}

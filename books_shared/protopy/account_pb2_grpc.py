@@ -3,6 +3,7 @@
 import grpc
 
 import books_shared.protopy.account_pb2 as account__pb2
+from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class AccountServiceStub(object):
@@ -14,6 +15,11 @@ class AccountServiceStub(object):
         Args:
             channel: A grpc.Channel.
         """
+        self.GetAccountList = channel.unary_unary(
+                '/AccountService/GetAccountList',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=account__pb2.GetAccountListResponse.FromString,
+                )
         self.GetAccount = channel.unary_unary(
                 '/AccountService/GetAccount',
                 request_serializer=account__pb2.GetAccountRequest.SerializeToString,
@@ -28,6 +34,12 @@ class AccountServiceStub(object):
 
 class AccountServiceServicer(object):
     """Missing associated documentation comment in .proto file."""
+
+    def GetAccountList(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
     def GetAccount(self, request, context):
         """Missing associated documentation comment in .proto file."""
@@ -44,6 +56,11 @@ class AccountServiceServicer(object):
 
 def add_AccountServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
+            'GetAccountList': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetAccountList,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=account__pb2.GetAccountListResponse.SerializeToString,
+            ),
             'GetAccount': grpc.unary_unary_rpc_method_handler(
                     servicer.GetAccount,
                     request_deserializer=account__pb2.GetAccountRequest.FromString,
@@ -63,6 +80,23 @@ def add_AccountServiceServicer_to_server(servicer, server):
  # This class is part of an EXPERIMENTAL API.
 class AccountService(object):
     """Missing associated documentation comment in .proto file."""
+
+    @staticmethod
+    def GetAccountList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/AccountService/GetAccountList',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            account__pb2.GetAccountListResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
     @staticmethod
     def GetAccount(request,

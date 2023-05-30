@@ -14,6 +14,7 @@ setup(
         "grpcio-reflection == 1.33.2",
         "python-dotenv == 1.0.0",
         "Flask-SQLAlchemy == 3.0.3",
-        "Faker==18.9.0"
+        "Faker==18.9.0",
+        "pytest==7.3.1"
     ]
 )

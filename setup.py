@@ -7,7 +7,7 @@ setup(
     description='Shared modules for book store project',
     url='https://github.com/Alexzhukoff86/book-shared',
     keywords='development, setup, setuptools, wheel',
-    python_requires='==3.8',
+    python_requires='==3.8.16',
     packages=find_packages(),
     install_requires=[
         "grpcio_tools == 1.33.2",

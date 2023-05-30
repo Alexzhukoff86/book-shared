@@ -35,6 +35,11 @@ class BookServiceStub(object):
                 request_serializer=book__pb2.AddBookRequest.SerializeToString,
                 response_deserializer=book__pb2.AddBookResponse.FromString,
                 )
+        self.DeleteAllBooks = channel.unary_unary(
+                '/BookService/DeleteAllBooks',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class BookServiceServicer(object):
@@ -64,6 +69,12 @@ class BookServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def DeleteAllBooks(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_BookServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -86,6 +97,11 @@ def add_BookServiceServicer_to_server(servicer, server):
                     servicer.AddBook,
                     request_deserializer=book__pb2.AddBookRequest.FromString,
                     response_serializer=book__pb2.AddBookResponse.SerializeToString,
+            ),
+            'DeleteAllBooks': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteAllBooks,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -162,5 +178,22 @@ class BookService(object):
         return grpc.experimental.unary_unary(request, target, '/BookService/AddBook',
             book__pb2.AddBookRequest.SerializeToString,
             book__pb2.AddBookResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteAllBooks(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/BookService/DeleteAllBooks',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

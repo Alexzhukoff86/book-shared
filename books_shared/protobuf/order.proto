@@ -51,5 +51,6 @@ service OrderService {
   rpc GetOrder (GetOrderRequest) returns (GetOrderResponse) {}
   rpc CreateOrder (CreateOrderRequest) returns (CreateOrderResponse) {}
   rpc UpdateOrder (UpdateOrderRequest) returns (UpdateOrderResponse) {}
+  rpc DeleteAllOrders (google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }
 

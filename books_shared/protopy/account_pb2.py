@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\raccount.proto\x1a\x1bgoogle/protobuf/empty.proto\"2\n\x07\x41\x63\x63ount\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\"\x1f\n\x11GetAccountRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"/\n\x12GetAccountResponse\x12\x19\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x08.Account\"3\n\x14\x43reateAccountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\"#\n\x15\x43reateAccountResponse\x12\n\n\x02id\x18\x01 \x01(\x05\"4\n\x16GetAccountListResponse\x12\x1a\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32\x08.Account2\xd0\x01\n\x0e\x41\x63\x63ountService\x12\x43\n\x0eGetAccountList\x12\x16.google.protobuf.Empty\x1a\x17.GetAccountListResponse\"\x00\x12\x37\n\nGetAccount\x12\x12.GetAccountRequest\x1a\x13.GetAccountResponse\"\x00\x12@\n\rCreateAccount\x12\x15.CreateAccountRequest\x1a\x16.CreateAccountResponse\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\raccount.proto\x1a\x1bgoogle/protobuf/empty.proto\"2\n\x07\x41\x63\x63ount\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0c\n\x04name\x18\x02 \x01(\t\x12\r\n\x05\x65mail\x18\x03 \x01(\t\"\x1f\n\x11GetAccountRequest\x12\n\n\x02id\x18\x01 \x01(\x05\"/\n\x12GetAccountResponse\x12\x19\n\x07\x61\x63\x63ount\x18\x01 \x01(\x0b\x32\x08.Account\"3\n\x14\x43reateAccountRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05\x65mail\x18\x02 \x01(\t\"#\n\x15\x43reateAccountResponse\x12\n\n\x02id\x18\x01 \x01(\x05\"4\n\x16GetAccountListResponse\x12\x1a\n\x08\x61\x63\x63ounts\x18\x01 \x03(\x0b\x32\x08.Account2\x97\x02\n\x0e\x41\x63\x63ountService\x12\x43\n\x0eGetAccountList\x12\x16.google.protobuf.Empty\x1a\x17.GetAccountListResponse\"\x00\x12\x37\n\nGetAccount\x12\x12.GetAccountRequest\x1a\x13.GetAccountResponse\"\x00\x12@\n\rCreateAccount\x12\x15.CreateAccountRequest\x1a\x16.CreateAccountResponse\"\x00\x12\x45\n\x11\x44\x65leteAllAccounts\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -301,7 +301,7 @@ _ACCOUNTSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=325,
-  serialized_end=533,
+  serialized_end=604,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetAccountList',
@@ -330,6 +330,16 @@ _ACCOUNTSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_CREATEACCOUNTREQUEST,
     output_type=_CREATEACCOUNTRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteAllAccounts',
+    full_name='AccountService.DeleteAllAccounts',
+    index=3,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

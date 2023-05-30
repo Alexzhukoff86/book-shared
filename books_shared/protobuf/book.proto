@@ -53,4 +53,5 @@ service BookService {
   rpc GetBook (GetBookRequest) returns (GetBookResponse) {}
   rpc UpdateBookCount (UpdateBookCountRequest) returns (UpdateBookCountResponse) {}
   rpc AddBook (AddBookRequest) returns (AddBookResponse) {}
+  rpc DeleteAllBooks (google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }

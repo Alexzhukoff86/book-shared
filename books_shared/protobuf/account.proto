@@ -33,4 +33,5 @@ service AccountService {
   rpc GetAccountList (google.protobuf.Empty) returns (GetAccountListResponse) {}
   rpc GetAccount (GetAccountRequest) returns (GetAccountResponse) {}
   rpc CreateAccount (CreateAccountRequest) returns (CreateAccountResponse) {}
+  rpc DeleteAllAccounts (google.protobuf.Empty) returns (google.protobuf.Empty) {}
 }

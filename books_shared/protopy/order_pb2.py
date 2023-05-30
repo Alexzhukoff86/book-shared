@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x0border.proto\x1a\x1bgoogle/protobuf/empty.proto\"h\n\x05Order\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x13\n\x0btotal_price\x18\x04 \x01(\x02\x12\x1c\n\x06status\x18\x05 \x01(\x0e\x32\x0c.OrderStatus\"\x1d\n\x0fGetOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\")\n\x10GetOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"d\n\x12UpdateOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0btotal_price\x18\x02 \x01(\x02\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x1c\n\x06status\x18\x04 \x01(\x0e\x32\x0c.OrderStatus\",\n\x13UpdateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"%\n\x12\x43reateOrderRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\",\n\x13\x43reateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\".\n\x14GetOrderListResponse\x12\x16\n\x06orders\x18\x01 \x03(\x0b\x32\x06.Order*5\n\x0bOrderStatus\x12\x0b\n\x07\x43REATED\x10\x00\x12\x0e\n\nIN_PROGRES\x10\x01\x12\t\n\x05PAYED\x10\x02\x32\xfa\x01\n\x0cOrderService\x12?\n\x0cGetOrderList\x12\x16.google.protobuf.Empty\x1a\x15.GetOrderListResponse\"\x00\x12\x31\n\x08GetOrder\x12\x10.GetOrderRequest\x1a\x11.GetOrderResponse\"\x00\x12:\n\x0b\x43reateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00\x12:\n\x0bUpdateOrder\x12\x13.UpdateOrderRequest\x1a\x14.UpdateOrderResponse\"\x00\x62\x06proto3'
+  serialized_pb=b'\n\x0border.proto\x1a\x1bgoogle/protobuf/empty.proto\"h\n\x05Order\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x0f\n\x07user_id\x18\x02 \x01(\x05\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x13\n\x0btotal_price\x18\x04 \x01(\x02\x12\x1c\n\x06status\x18\x05 \x01(\x0e\x32\x0c.OrderStatus\"\x1d\n\x0fGetOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\")\n\x10GetOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"d\n\x12UpdateOrderRequest\x12\n\n\x02id\x18\x01 \x01(\x05\x12\x13\n\x0btotal_price\x18\x02 \x01(\x02\x12\x0f\n\x07\x62ook_id\x18\x03 \x03(\x05\x12\x1c\n\x06status\x18\x04 \x01(\x0e\x32\x0c.OrderStatus\",\n\x13UpdateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\"%\n\x12\x43reateOrderRequest\x12\x0f\n\x07user_id\x18\x01 \x01(\x05\",\n\x13\x43reateOrderResponse\x12\x15\n\x05order\x18\x01 \x01(\x0b\x32\x06.Order\".\n\x14GetOrderListResponse\x12\x16\n\x06orders\x18\x01 \x03(\x0b\x32\x06.Order*5\n\x0bOrderStatus\x12\x0b\n\x07\x43REATED\x10\x00\x12\x0e\n\nIN_PROGRES\x10\x01\x12\t\n\x05PAYED\x10\x02\x32\xbf\x02\n\x0cOrderService\x12?\n\x0cGetOrderList\x12\x16.google.protobuf.Empty\x1a\x15.GetOrderListResponse\"\x00\x12\x31\n\x08GetOrder\x12\x10.GetOrderRequest\x1a\x11.GetOrderResponse\"\x00\x12:\n\x0b\x43reateOrder\x12\x13.CreateOrderRequest\x1a\x14.CreateOrderResponse\"\x00\x12:\n\x0bUpdateOrder\x12\x13.UpdateOrderRequest\x1a\x14.UpdateOrderResponse\"\x00\x12\x43\n\x0f\x44\x65leteAllOrders\x12\x16.google.protobuf.Empty\x1a\x16.google.protobuf.Empty\"\x00\x62\x06proto3'
   ,
   dependencies=[google_dot_protobuf_dot_empty__pb2.DESCRIPTOR,])
 
@@ -449,7 +449,7 @@ _ORDERSERVICE = _descriptor.ServiceDescriptor(
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
   serialized_start=561,
-  serialized_end=811,
+  serialized_end=880,
   methods=[
   _descriptor.MethodDescriptor(
     name='GetOrderList',
@@ -488,6 +488,16 @@ _ORDERSERVICE = _descriptor.ServiceDescriptor(
     containing_service=None,
     input_type=_UPDATEORDERREQUEST,
     output_type=_UPDATEORDERRESPONSE,
+    serialized_options=None,
+    create_key=_descriptor._internal_create_key,
+  ),
+  _descriptor.MethodDescriptor(
+    name='DeleteAllOrders',
+    full_name='OrderService.DeleteAllOrders',
+    index=4,
+    containing_service=None,
+    input_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
+    output_type=google_dot_protobuf_dot_empty__pb2._EMPTY,
     serialized_options=None,
     create_key=_descriptor._internal_create_key,
   ),

@@ -15,6 +15,7 @@ setup(
         "python-dotenv == 1.0.0",
         "Flask-SQLAlchemy == 3.0.3",
         "Faker==18.9.0",
-        "pytest==7.3.1"
+        "pytest==7.3.1",
+        "pytest-cov==4.1.0"
     ]
 )
